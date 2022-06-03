@@ -4,4 +4,4 @@
 2. npm i
 3. node index.js
 4. scan QR
-5. Bot Ready.
+5. Bot Ready...!!!
