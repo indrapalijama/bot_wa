@@ -37,6 +37,7 @@ function request() {
   fetch('https://fulk-alkitab-api.herokuapp.com/renungan/shss')
     .then(function (response) {
       response.json().then(data => {
+        console.log('response', data)
         renungan.source = data.source;
         renungan.title = data.title;
         renungan.passage = data.passage;
