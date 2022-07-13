@@ -14,6 +14,7 @@ async function start(client) {
     var text = msg.body.toLowerCase();
     if (text.includes('testing')) {
       await request();
+      await console.log('data', renungan)
       await client.sendText(msg.from,
         `${renungan.title} (${renungan.passage})`);
     }
