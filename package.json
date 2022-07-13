@@ -7,10 +7,14 @@
   "scripts": {
     "start": "node index.js"
   },
-  "author": "",
+  "author": "Indra Palijama",
   "license": "ISC",
   "dependencies": {
     "@open-wa/wa-automate": "^4.42.4",
     "node-fetch": "^3.2.7"
+  },
+  "engines": {
+    "node": "v12.22.12",
+    "npm": "6.14.8"
   }
 }
