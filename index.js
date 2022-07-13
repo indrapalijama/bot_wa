@@ -1,5 +1,6 @@
 import { create, Client } from "@open-wa/wa-automate";
 import fetch from "node-fetch";
+// import puppeteer from "puppeteer";
 create().then((client) => start(client));
 
 let renungan = {
@@ -10,13 +11,15 @@ let renungan = {
 };
 
 async function start(client) {
+  // const browser = await puppeteer.launch({
+  //   args: ['--no-sandbox', '--disable-setuid-sandbox']
+  // });
   client.onMessage(async (msg) => {
     var text = msg.body.toLowerCase();
     if (text.includes('testing')) {
       await request();
       await console.log('data', renungan)
-      await client.sendText(msg.from,
-        `${renungan.title} (${renungan.passage})`);
+      await client.sendText(msg.from, `${renungan.title} (${renungan.passage})`);
     }
     // if (msg.mimetype) {
     //   if (msg.caption === '!s' && msg.type === 'image') {
