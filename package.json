@@ -3,12 +3,14 @@
   "version": "1.0.0",
   "description": "",
   "main": "index.js",
+  "type": "module",
   "scripts": {
     "start": "node index.js"
   },
   "author": "",
   "license": "ISC",
   "dependencies": {
-    "@open-wa/wa-automate": "^4.37.2"
+    "@open-wa/wa-automate": "^4.42.4",
+    "node-fetch": "^3.2.7"
   }
 }
