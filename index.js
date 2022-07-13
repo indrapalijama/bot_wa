@@ -1,6 +1,5 @@
 import { create, Client } from "@open-wa/wa-automate";
 import fetch from "node-fetch";
-// import puppeteer from "puppeteer";
 create().then((client) => start(client));
 
 const conn = new Promise((resolve, reject) => {
