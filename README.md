@@ -1,1 +1,1 @@
-# for educational purposes
+# Multipurpose bot
