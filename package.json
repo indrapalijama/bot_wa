@@ -1,0 +1,21 @@
+{
+  "name": "fulk_bot_wa",
+  "version": "1.0.1",
+  "description": "",
+  "main": "index.js",
+  "type": "module",
+  "scripts": {
+    "start": "node index.js"
+  },
+  "author": "Indra Palijama",
+  "license": "ISC",
+  "dependencies": {
+    "@open-wa/wa-automate": "^4.42.4",
+    "node-fetch": "^3.2.7",
+    "puppeteer": "^15.3.2"
+  },
+  "engines": {
+    "node": "v12.22.12",
+    "npm": "6.14.8"
+  }
+}
