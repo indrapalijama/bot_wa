@@ -2,7 +2,6 @@ import { create, Client } from "@open-wa/wa-automate";
 import fetch from "node-fetch";
 create().then((client) => start(client));
 
-<<<<<<< HEAD
 //renungan function
 var renungan = function (type) {
   let source = type == 'r' ? 'rh' : 'sh'
@@ -17,39 +16,10 @@ var renungan = function (type) {
       })
   });
 }
-=======
-const sh = new Promise((resolve, reject) => {
-  fetch('https://fulk-alkitab-api.herokuapp.com/renungan/sh')
-    .then(function (response) {
-      response.json().then(data => {
-        setTimeout(() => {
-          resolve(
-            `${data.title} (${data.passage})
-            ${data.content}`);
-        }, 300);
-      });
-    })
-});
-
-const rh = new Promise((resolve, reject) => {
-  fetch('https://fulk-alkitab-api.herokuapp.com/renungan/rh')
-    .then(function (response) {
-      response.json().then(data => {
-        setTimeout(() => {
-          resolve(`
-            ${data.title} (${data.passage})
-            ${data.content}
-            `);
-        }, 300);
-      });
-    })
-});
->>>>>>> origin/master
 
 async function start(client) {
   client.onMessage(async (msg) => {
     var text = msg.body.toLowerCase();
-<<<<<<< HEAD
     switch (text) {
       case 'halo':
         client.sendText(msg.from,
@@ -71,13 +41,6 @@ async function start(client) {
       default:
         // client.sendText(msg.from, `hello, i'm a bot`)
         break;
-=======
-    if (text === 'santapan harian') {
-      sh.then(renungan => client.sendText(msg.from, renungan))
-    }
-    if (text === 'renungan harian') {
-      rh.then(renungan => client.sendText(msg.from, renungan))
->>>>>>> origin/master
     }
   });
 }
